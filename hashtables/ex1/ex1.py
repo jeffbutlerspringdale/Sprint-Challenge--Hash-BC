@@ -12,8 +12,8 @@ def get_indices_of_item_weights(weights, length, limit):
     for i in range(length):
         # creating hashvalue by passing ht, and its current limit minus the current weight by index
         hashVal = hash_table_retrieve(ht, limit - weights[i])
-
-        if hashVal:
+        # check to see if the hash is 
+        if hashVal is not None:
             a = (i, hashVal)
             print(a)
             return a
